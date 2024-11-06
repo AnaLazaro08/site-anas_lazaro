@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+body{
+    background-color: #fffce9;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding-bottom: 60px; /* Espaço para o footer fixo */
+}
+
+.letramao{
+    font-family: 'Dancing Script';
+    font-size: 50px;
+    color: #daa520;
+}
+
+.letraforma{
+    font-family: 'Montserrat';
+    font-size: 28px;
+    color: #daa520;
+}
+
+.fontefina{
+    font-family: 'Montserrat'; 
+    font-size: 23px;
+    color: #000000;
+}
+
+nav{ 
+    background-color: #b6975e; 
+    padding: 5px 0; 
+    height: 55px; 
+    display: flex;
+    
+} 
+nav ul{ 
+    display: flex;
+    justify-content: center;
+    list-style-type: none; 
+    margin: 0px; 
+    padding: 4px; 
+    flex-grow: 2; 
+} 
+
+.logo-nav{
+    margin-right: 10px;
+} 
+
+nav ul li{ 
+   position: relative; 
+   margin: 0 15px; 
+} 
+nav ul li a{ 
+    color:#ffffff; 
+    text-decoration: none; 
+    font-size: 18px; 
+    padding: 10px; 
+    display: block; 
+    transition: color 0.2s; 
+} 
+nav ul li a:hover{ 
+    color: #ffb835af; 
+} 
+nav ul li.dropdown-content{ 
+    display: none; 
+    position: absolute; 
+    background-color: #000000; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0,2); 
+    z-index: 1; 
+    min-width: 160px; 
+    padding: 0; 
+} 
+nav ul li .dropdown-content li{ 
+    margin: 0; 
+} 
+nav ul li .dropdown-content li a{ 
+    padding: 10px 15px; 
+} 
+nav ul li .dropdown-content li a:hover{ 
+    background-color: #000000; 
+} 
+nav ul li:hover .dropdown-content{ 
+    display: block; 
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    padding: 20px;
+}
+
+.footer {
+    /*position: fixed;*/
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #b6975e;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 -2px 5px #1b1b1ba4(255, 0, 0, 0.612);
+    justify-content: center;
+}
+
+/* Estilização do conteúdo do footer */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilização da navegação do footer */
+.footer-nav {
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilização do conteiner do slide */ 
+.slider{ 
+    width: 100%;  /*o slide ocupa 100% da largura */ 
+    max-width: 100%;  /* limite de largura para o slide */ 
+    margin: 0 auto; /*centraliza o slide horizontalmente*/ 
+    overflow: hidden; /*esconde o conteudo que ultrapassa os limites do conteiner*/ 
+    position: relative; /*posiciona o slide de forma relativa para posicionar elementos dentro dele se necessario*/
+    padding: 100px;
+} 
+.slides{ 
+    display: flex; /*alinha os slides em linha*/ 
+    width: 100%; /*largura do conteiner é 3 vezes a largura do slide para acomodar os slides*/ 
+    animation: slideAnimation 15s infinite; /*aplica a animação nos slides com duração de 15 segundos*/ 
+} 
+/* estilização individual de cada slide */ 
+.slide{ 
+    width: 100%; 
+    flex-shrink: 0; /*evita que o slide encolha o flex a alterar seu tamanho*/ 
+}
+/* definição da animação para os slides */ 
+@keyframes slideAnimation { 
+    0%{ transform: translateX(0);} /*posição inicial do primeiro slide*/ 
+    33%{ transform: translateX(-100%);} /*move para o segundo slide*/ 
+    100%{ transform: translateX(0);} /*retorna ao primeiro slide*/ 
+} 
+/* estilização das imagens para os slides */ 
+.slide img{ 
+    width: 100%; /*a img ocupa 100% da largura do slide*/ 
+    display: block; /*remove qualquer espaço extra ao redor da img*/ 
+} 
+
+.container {
+    display: flex; /* Define o contêiner como um flexbox */
+    gap: 20px; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem linha se necessário */
+}
+
+.container-galeria-grid{
+    display: flex;  /* ativa o CSS grid*/
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+    padding: 0px 30px;
+ }
+  
+ .container-galeria-grid a {
+     text-decoration: none;
+ }
+  
+ .item-galeria-grid{
+     border: 2px solid #aaaaaac6;
+     border-radius: 5px;
+     overflow: hidden;
+     transition: all .3s;
+ }
+ .item-galeria-grid img{
+     width: 100%;
+     height: 100%;
+ }
+  
+  
+ .container-galeria-grid:hover .item-galeria-grid{
+     opacity: .5;
+ }
+  
+ .container-galeria-grid .item-galeria-grid:hover {
+     opacity: 1
+ }
+  
+ /* Cada item da galeria */
+ .item-galeria-grid:hover{
+     transform: translateY(-20px)
+ }
+
+ .anas{
+    display: flex;
+    gap: 100px;
+    padding: 50px;
+ }

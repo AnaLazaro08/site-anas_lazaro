@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="StyleListarTarefa.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+       
+        <table id="tabelaTarefas">
+            <thead>
+                <tr>
+                    <th>Nome da Tarefa</th>
+                    <th>Descrição</th>
+                    <th>Data de Entrega</th>
+                    <th>Responsável</th>
+                    <th>Status</th>
+                    <th>Ações</th> <!-- Nova coluna de ações -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- As tarefas serão inseridas aqui dinamicamente -->
+            </tbody>
+        </table>
+
+
+        <!-- Formulário para editar a tarefa -->
+        <div id="formularioEdicao" style="display:none;">
+            <h2>Editar Tarefa</h2>
+            <form id="formEditarTarefa">
+                <input type="hidden" id="tarefaId">
+
+
+                <label for="editarNome">Nome da Tarefa:</label>
+                <input type="text" id="editarNome" required>
+
+
+                <label for="editarDescricao">Descrição:</label>
+                <textarea id="editarDescricao" required></textarea>
+
+
+                <label for="editarDataEntrega">Data de Entrega:</label>
+                <input type="date" id="editarDataEntrega" required>
+
+
+                <label for="editarResponsavel">Responsável:</label>
+                <select id="editarResponsavel" required></select> <!-- Usamos um select para listar os responsáveis -->
+
+
+                <label for="editarStatus">Status:</label>
+                <select id="editarStatus">
+                    <option value="incompleta">Incompleta</option>
+                    <option value="completa">Concluída</option>
+                </select>
+
+
+                <button type="submit">Salvar Alterações</button>
+                <button type="button" id="cancelarEdicao">Cancelar</button>
+            </form>
+        </div>
+
+
+    </div>
+
+
+    <script src="agenda.js"> </script>
+</body>
+</html>

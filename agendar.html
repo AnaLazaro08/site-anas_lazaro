@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="agende.css">
+</head>
+<body>
+    <nav> 
+        <ul> 
+            <li><a href="studioanas.html"><em>STUDIO</em></a></li> 
+            <li><a href="trabalhos.html">TRABALHOS</a></li> 
+            <li><a href="profissionais.html">PROFISSIONAIS</a></li> 
+            <li><a href="agendar.html">AGENDE SEU HORÁRIO</a></li>
+        </ul> 
+        <img class="logo-nav" src="img/logo.png" alt="" >
+    </nav>
+
+    <div class="form-container">
+        <h2>Agendamento cliente</h2>
+        <form action="/agenda" method="POST">
+           
+            <div class="form-group">
+                <label for="nome">Nome do cliente:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o nome do cliente" required>
+            </div>
+
+           
+            <div class="form-group">
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" placeholder="Descreva o procedimento que você quer agendar" rows="4" required></textarea>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="data_agenda">Data do procedimento:</label>
+                <input type="date" id="data_agenda" name="data_agenda" required>
+            </div>
+
+           
+            <div class="form-group">
+                <button type="submit">Salvar agendamento</button>
+            </div>
+        </form>
+    </div>
+ 
+    <script src="agenda.js"> </script>
+    
+</body>
+</html>
